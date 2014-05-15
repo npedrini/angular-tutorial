@@ -1,6 +1,6 @@
 (function (window, angular, undefined) { 'use strict';
 
-	angular.module('ngTutorial',['ng','ngSanitize','ui.bootstrap'])
+	angular.module('ngTutorial',['ngSanitize','ui.bootstrap'])
 		.factory
 		(
 			'$tutorial',
