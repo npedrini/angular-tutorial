@@ -1,0 +1,135 @@
+<div class="container">
+
+	<div class="row">
+	
+		<div class="col-sm-8">
+		
+			<h1>Angular Tutorial</h1>
+	
+			<p class="lead">An angular <a href="http://bower.io/">bower</a> component for creating simple tutorials.</p>
+			
+			<h2>Usage</h2>
+			
+			<p>
+				Add <code>angular-tutorial</code> as a module dependency:
+				<pre>angular.module(&#39;app&#39;,[<strong>&#39;ngTutorial&#39;]</strong>);</pre>
+			</p>
+			
+			<p>
+				Register a tutorial:
+				<pre>angular.module('app').controller
+(
+	'AppCtrl',
+	[
+	 	'$scope','$tutorial',
+	 	function($scope,$tutorial)
+	 	{
+	 		$tutorial.register
+	 		(
+	 			"tutorial1",		//id
+	 			{},					//config
+	 			"My Tutorial",		//name
+	 			[					//steps
+	 			 	{
+						type: "showMessage",
+						message: {
+							content:"Step 1",
+							buttonText: "Start",
+							header: "Welcome!"
+						}
+					},
+					.
+					.
+					.
+	 			]
+	 		);
+	 	}
+	 ]
+);
+				</pre>
+			</p>
+			
+			<p>Trigger a tutorial:
+				<pre>&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot; <strong>ng-tutorial</strong> <strong>ng-tutorial-id=&quot;mytutorial&quot;</strong>&gt;My Tutorial&lt;/button&gt;</pre>
+			</p>
+			
+			<h2>Step Types</h2>
+			
+			<accordion close-others="oneAtATime">
+			
+				<accordion-group heading="waitForClick">
+				
+					<p>The <code>waitForClick</code> step type tells the tutorial to wait for one of the specified targets to be clicked.</p>
+					
+					<h5>Properties</h5>
+					
+					<ul>
+						<li><code>selectors</code> One or more <a href="http://www.w3schools.com/cssref/css_selectors.asp">css selectors</a> to target (Array)</li>
+						<li><code>tooltips</code> Tooltips to show for the corresponding <code>selector</code> (Array) 
+							<p>Tooltip properties:</p>
+							<ul>
+								<li><code>text</code> Text to display in the tooltip (String)</li>
+								<li><code>placement</code> One of top, right, bottom or left (String)</li>
+							</ul>
+						</li>
+					</ul>
+					
+				</accordion-group>
+				
+				<accordion-group heading="waitForNavigate">
+				
+					<p>The <code>waitForNavigate</code> step type tells the tutorial to wait for a change to <code>$location.path()</code>.</p>
+					
+					<h5>Properties</h5>
+					
+					<ul>
+						<li><code>path</code> The value $location.path() must be set to to continue (String, required)</li>
+						<li><code>selectors</code> One or more <a href="http://www.w3schools.com/cssref/css_selectors.asp">css selectors</a> to highlight (Array)</li>
+						<li><code>tooltips</code> Tooltips to show for the corresponding <code>selector</code> (Array) 
+							<p>Tooltip properties:</p>
+							<ul>
+								<li><code>text</code> Text to display in the tooltip (String)</li>
+								<li><code>placement</code> One of top, right, bottom or left (String)</li>
+							</ul>
+						</li>
+					</ul>
+					
+				</accordion-group>
+				
+				<accordion-group heading="showMessage">
+				
+					<p>The <code>showMessage</code> step type tells the tutorial to show a message using <a href="http://angular-ui.github.io/bootstrap/">ui-bootstrap</a>'s <code>$modal</code> service</p>
+					
+					<h5>Properties</h5>
+					
+					<ul>
+						<li><code>message</code> The message to display (String/Object, required) 
+							<p>If the message is an Object, the following properties are supported</p>
+							<ul>
+								<li><code>message</code> Text to display in the tooltip (String, required)</li>
+								<li><code>buttonText</code> Text for the confirm button (defaults to "Continue") (String)</li>
+								<li><code>header</code> Text for the moda's header (no header will be displayed if unspecified) (String)</li>
+							</ul>
+						</li>
+					</ul>
+					
+				</accordion-group>
+				
+				<accordion-group heading="delay">
+				
+					<p>The <code>delay</code> step type tells the tutorial to wait before proceeding.</p>
+					
+					<h5>Properties</h5>
+					
+					<ul class="list-unstyled">
+						<li><code>delay</code> The delay in milliseconds to wait (String/Object, required)</li>
+					</ul>
+					
+				</accordion-group>
+				
+		    </accordion>
+		</div>
+		
+	</div>
+	
+</div>

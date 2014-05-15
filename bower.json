@@ -1,0 +1,26 @@
+{
+  "name": "angular-tutorial",
+  "version": "0.0.1",
+  "main": "./angular-tutorial.js",
+  "dependencies": {
+    "angular": "1.2.16",
+    "angular-sanitize": "1.2.16",
+    "angular-ui-bootstrap": "0.11.0",
+    "jquery": "2.1.0"
+  },
+  "authors": [
+    "npedrini <go@looklisten.net>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

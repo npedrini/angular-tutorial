@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<style>
+body { padding-top: 70px; }
+</style>
+</head>
+
+<body ng-controller="AppCtrl">
+
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	
+		<div class="container-fluid">
+		
+			<div class="navbar-header">
+				<span title="adfasd" data-toggle="" class="navbar-brand">angular-tutorial</span>
+			</div>
+			
+			<ul class="nav navbar-nav">
+				<li ng-repeat="nav in navigation"><a ng-click="location.path(nav.id)" title="{{nav.label}}" data-toggle="tooltip" >{{nav.label}}</a></li>
+			</ul>
+			
+		</div>
+		
+	</nav>
+	
+	<div ng-view></div>
+	
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/js/tooltip.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-ui-bootstrap/dist/ui-bootstrap-custom-tpls-0.11.0.js"></script>
+	
+	<script type="text/javascript" src="../angular-tutorial.js"></script>
+	
+	<script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
