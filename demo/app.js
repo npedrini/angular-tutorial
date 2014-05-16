@@ -34,7 +34,6 @@ angular
 		 				cancellable: true,
 		 				highlightOpacity:.25
 		 			},
-		 			"Tutorial 1: Step Types",
 		 			[
 		 			 	{
 							type: "showMessage",
@@ -65,9 +64,9 @@ angular
 			 				path: "/home",
 			 				tooltips: 
 			 					[
-			 					 {text:"Click here to go to the Home Screen",placement:"right"}
+			 					 {selector:".navbar-nav li:nth-child(1) a",text:"Click here to go to the Home Screen",placement:"right"}
 			 					 ],
-			 				selectors: [".navbar-nav li:nth-child(1) a"]
+			 				targets: [".navbar-nav li:nth-child(1) a"]
 			 			},
 			 			{
 							type: "showMessage",
@@ -81,17 +80,17 @@ angular
 			 				type: "waitForClick",
 			 				tooltips: 
 			 					[
-			 					 {text:"I'm waiting for you to click this, and only this",placement:"right"}
+			 					 {selector:".container > .row:first-child > .col-sm-8 > h1",text:"I'm waiting for you to click this, and only this",placement:"right"}
 			 					 ],
-			 				selectors: [".container > .row:first-child > .col-sm-8 > h1"]
+			 				targets: [".container > .row:first-child > .col-sm-8 > h1"]
 			 			},
 			 			{
 			 				type: "waitForClick",
 			 				tooltips: 
 			 					[
-			 					 {text:"Please click this to",placement:"right"}
+			 					 {selector:"accordion > .panel-group > .panel:nth-child(1) > .panel-heading > .panel-title > a",text:"Please click this to",placement:"right"}
 			 					 ],
-			 				selectors: ["accordion > .panel-group > .panel:nth-child(1) > .panel-heading > .panel-title > a"]
+			 				targets: ["accordion > .panel-group > .panel:nth-child(1) > .panel-heading > .panel-title > a"]
 			 			},
 			 			{
 							type: "showMessage",

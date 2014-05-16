@@ -28,7 +28,6 @@
 	 		(
 	 			"tutorial1",		//id
 	 			{},					//config
-	 			"My Tutorial",		//name
 	 			[					//steps
 	 			 	{
 						type: "showMessage",
@@ -64,11 +63,13 @@
 					<h5>Properties</h5>
 					
 					<ul>
-						<li><code>selectors</code> One or more <a href="http://www.w3schools.com/cssref/css_selectors.asp">css selectors</a> to target (Array)</li>
-						<li><code>tooltips</code> Tooltips to show for the corresponding <code>selector</code> (Array) 
-							<p>Tooltip properties:</p>
+						<li><code>highlight</code> One or more <a href="http://www.w3schools.com/cssref/css_selectors.asp">css selectors</a> to highlight via a cutout in the backdrop (defaults to <code>targets</code> if unspecified) (Array)</li>
+						<li><code>targets</code> One or more <a href="http://www.w3schools.com/cssref/css_selectors.asp">css selectors</a> representing click targets (Array, required)</li>
+						<li><code>tooltips</code> Tooltips to show (Array) 
+							<p>Tooltip Properties</p>
 							<ul>
-								<li><code>text</code> Text to display in the tooltip (String)</li>
+								<li><code>selector</code> CSS selector to affix the tooltip to (String, required)</li>
+								<li><code>text</code> Text to display in the tooltip (String, required)</li>
 								<li><code>placement</code> One of top, right, bottom or left (String)</li>
 							</ul>
 						</li>
@@ -83,12 +84,14 @@
 					<h5>Properties</h5>
 					
 					<ul>
-						<li><code>path</code> The value $location.path() must be set to to continue (String, required)</li>
+						<li><code>highlight</code> One or more <a href="http://www.w3schools.com/cssref/css_selectors.asp">css selectors</a> to highlight via a cutout in the backdrop (defaults to <code>targets</code> is unspecified) (Array)</li>
+						<li><code>path</code> The change in <code>$location.path()</code> to wait for (String, required)</li>
 						<li><code>selectors</code> One or more <a href="http://www.w3schools.com/cssref/css_selectors.asp">css selectors</a> to highlight (Array)</li>
-						<li><code>tooltips</code> Tooltips to show for the corresponding <code>selector</code> (Array) 
-							<p>Tooltip properties:</p>
+						<li><code>tooltips</code> Tooltips to show (Array) 
+							<p>Tooltip Properties</p>
 							<ul>
-								<li><code>text</code> Text to display in the tooltip (String)</li>
+								<li><code>selector</code> CSS selector to affix the tooltip to (String, required)</li>
+								<li><code>text</code> Text to display in the tooltip (String, required)</li>
 								<li><code>placement</code> One of top, right, bottom or left (String)</li>
 							</ul>
 						</li>

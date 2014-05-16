@@ -1,12 +1,12 @@
 {
   "name": "angular-tutorial",
   "description": "Tutorial system for angular.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./angular-tutorial.js",
   "dependencies": {
     "angular": "1.2.16",
     "angular-sanitize": "1.2.16",
-    "angular-ui-bootstrap": ">=0.10.0",
+    "angular-ui-bootstrap": "0.10.0",
     "jquery": "2.1.0"
   },
   "authors": [
