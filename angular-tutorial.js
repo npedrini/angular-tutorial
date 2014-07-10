@@ -423,7 +423,8 @@
 						var hideTooltips = function()
 						{
 							//	hide all tooltips
-							angular.element('.tutorial-tooltip').tooltip('destroy').removeClass('tutorial-tooltip');
+							angular.element('.tooltip').tooltip('destroy');
+							angular.element('.tutorial-tooltip').tooltip('destroy');
 							
 							var step = $scope.currentStep;
 							
